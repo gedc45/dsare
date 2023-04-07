@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: srert
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  type: ClusterIP  
+  ports:
+  - name: "srert"
+    port: 8080
+  selector:
+    app: srert
